@@ -1,0 +1,175 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+font-size: 16px;
+line-height: 1.5;
+background-color: #fffff7;
+}
+h1 {
+    position: relative;
+    margin: 20px 20px 40px;
+    font-size: 30px;
+    -webkit-text-stroke: .1vw black;
+    text-transform: uppercase;
+    display: inline-block;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+}
+
+/* h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #000;
+    -webkit-text-stroke: 0vw red;
+    border-right: 1px solid var(--orange-color);
+    animation: animate 6s linear infinite alternate;
+    width: fit-content;
+    overflow: hidden;
+} */
+
+.page-heading {
+    position: relative;
+    margin: 20px 20px 40px;
+    font-size: 30px;
+    -webkit-text-stroke: .1vw #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    color: #fff;
+}
+.page-heading::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #000;
+    /* -webkit-text-stroke: 0vw red; */
+    border-right: 1px solid #000;
+    animation: animate 6s linear infinite alternate;
+    width: fit-content;
+    overflow: hidden;
+}
+@keyframes animate {
+0%, 10%, 100% {
+    width: 0;
+}
+70%, 90% {
+    width: 100%;
+}
+100% {
+    scale: 1.2;
+
+}
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    align-items: start;
+    box-shadow: 0 5px 10px #595959;
+    border-radius: 20px;
+}
+
+.form-fieldset {
+border: 1px solid #ccc;
+padding: 10px;
+margin-bottom: 20px;
+grid-column: 1 / span 2;
+border-radius: 12px;
+}
+
+.form-fieldset legend {
+font-weight: bold;
+}
+
+.form-group {
+margin-bottom: 10px;
+display: grid;
+grid-template-columns: 120px 1fr;
+grid-gap: 10px;
+}
+
+.form-group label {
+font-weight: bold;
+text-align: right;
+align-self: center;
+}
+
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 8px;
+resize: none;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    box-shadow: 0px 5px 10px #ccc;
+    outline: none;
+}
+
+.form-group textarea {
+height: 100px;
+}
+
+.form-actions {
+margin-top: 20px;
+grid-column: 2;
+text-align: right;
+}
+
+.btn {
+display: inline-block;
+padding: 8px 12px;
+border: none;
+border-radius: 8px;
+background-color: #007bff;
+color: #fff;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.4s ease-in-out;
+}
+
+.btn:hover {
+background-color: #0069d9;
+scale: .9;
+border-radius: 12px;
+color: #fff;
+}
+
+.resume-preview {
+margin-top: 20px;
+border: 1px solid #ccc;
+padding: 30px;
+grid-column: 1 / span 2;
+box-shadow: 0px 5px 10px #ccc;
+border-radius: 10px;
+background-color: #fff;
+}
+
+@media print {
+.resume-preview {
+    display: block;
+}
+
+.form-actions {
+    display: none;
+}
+}

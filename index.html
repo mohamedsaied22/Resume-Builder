@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Builder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 data-text="Resume/Builder" class="page-heading">Resume Builder</h1>
+<div class="container">
+<form id="resume-form">
+
+<fieldset class="form-fieldset">
+    <legend>Personal Information</legend>
+    <div class="form-group">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name"  >
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"  >
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone"  >
+    </div>
+    <div class="form-group">
+        <label for="address">address:</label>
+        <input type="text" id="address" name="address"  >
+    </div>
+</hr>
+    <div class="form-group">
+        <label for="objective">Objective:</label>
+        <textarea id="objective" name="objective" rows="4"  ></textarea>
+    </div>
+    
+    </fieldset>
+    <!-- Education section -->
+    <fieldset class="form-fieldset">
+    <legend>Education</legend>
+    <div class="form-group">
+        <label for="degree">Degree:</label>
+        <input type="text" id="degree" name="degree[]"  >
+    </div>
+    <div class="form-group">
+        <label for="school">School:</label>
+        <input type="text" id="school" name="school[]"  >
+    </div>
+    <div class="form-group">
+        <label for="graduation-date">Graduation Date:</label>
+        <input type="month" id="graduation-date" name="graduation-date[]"  >
+    </div>
+    <div id="education-fields"></div>
+    <button type="button" id="add-education" class="btn">Add Education</button>
+    </fieldset>
+
+    <!-- Work Experience section -->
+    <fieldset class="form-fieldset">
+    <legend>Work Experience</legend>
+    <div class="form-group">
+        <label for="job-title">Job Title:</label>
+        <input type="text" id="job-title" name="job-title[]"  >
+    </div>
+    <div class="form-group">
+        <label for="employer">Company:</label>
+        <input type="text" id="employer" name="employer[]"  >
+    </div>
+    <div class="form-group">
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date" name="start-date[]"  >
+    </div>
+    <div class="form-group">
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date" name="end-date[]"  >
+    </div>
+    <div class="form-group">
+        <label for="job-description">Job Description:</label>
+        <textarea id="job-description" name="job-description[]" rows="4"  ></textarea>
+    </div>
+    <div id="experience-fields"></div>
+    <button type="button" id="add-experience" class="btn">Add Experience</button>
+    </fieldset>
+    
+    <fieldset class="form-fieldset">
+    <legend>Projects</legend>
+    <div class="form-group">
+        <label for="project">Project 1:</label>
+        <input type="text" id="project" name="project[]"  >
+    </div>
+    <div class="form-group">
+        <label for="project-link">Project-link:</label>
+        <input type="url" id="project-link" name="project-link[]"  >
+    </div>
+    <div class="form-group">
+        <label for="summary">Summary:</label>
+        <textarea id="summary" name="summary[]" rows="4"  ></textarea>
+    </div>
+    <div id="projects-fields"></div>
+    <button type="button" id="add-project" class="btn">Add project</button>
+    </fieldset>
+
+    <!-- Skills section -->
+    <fieldset class="form-fieldset">
+    <legend>Skills</legend>
+    <div class="form-group">
+        <label for="skill-1">Skill 1:</label>
+        <input type="text" id="skill-1" name="skill-1"  >
+    </div>
+    <div class="form-group">
+        <label for="skill-2">Skill 2:</label>
+        <input type="text" id="skill-2" name="skill-2"  >
+    </div>
+    <div class="form-group">
+        <label for="skill-3">Skill 3:</label>
+        <input type="text" id="skill-3" name="skill-3"  >
+    </div>
+    <div id="skills-fields"></div>
+    <button type="button" id="add-skills" class="btn">More Skills</button>
+    </fieldset>
+
+    <!-- Action buttons -->
+    <div class="form-actions">
+    <button type="submit" class="btn">Preview</button>
+    <button type="reset" id="reset-form" class="btn">Reset</button>
+    <!-- Print Resume button -->
+    <button type="button" id="print-resume" class="btn" disabled>Print Resume</button>
+
+    </div>
+</form>
+
+<!-- Resume Preview section -->
+<div id="resume-preview" class="resume-preview"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
