@@ -1,9 +1,13 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin Sans:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+
 * {
 box-sizing: border-box;
 }
 
 body {
-font-family: Arial, sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Ubuntu', sans-serif;
 font-size: 16px;
 line-height: 1.5;
 background-color: #fffff7;
@@ -46,6 +50,10 @@ h1 {
     top: 0;
     transform: translate(-50%, 0);
     color: #fff;
+    font-style: italic;
+    font-weight: 800;
+    scale: 1.2;
+
 }
 .page-heading::before {
     content: attr(data-text);
@@ -55,21 +63,22 @@ h1 {
     width: 0;
     height: 100%;
     color: #000;
-    /* -webkit-text-stroke: 0vw red; */
-    border-right: 1px solid #000;
-    animation: animate 6s linear infinite alternate;
+    -webkit-text-stroke: .1vw #000;
+    /* border-right: .5px solid #000; */
+    animation: animate 6s linear alternate;
     width: fit-content;
     overflow: hidden;
+    font-weight: 800;
+
 }
 @keyframes animate {
 0%, 10%, 100% {
     width: 0;
+        scale: 1;
+
 }
-70%, 90% {
+70% {
     width: 100%;
-}
-100% {
-    scale: 1.2;
 
 }
 }
