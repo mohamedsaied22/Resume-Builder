@@ -50,9 +50,9 @@ h1 {
     top: 0;
     transform: translate(-50%, 0);
     color: #fff;
-    font-style: italic;
-    font-weight: 800;
-    scale: 1.2;
+    /* font-style: italic; */
+    font-weight: 500;
+    /* scale: 1.2; */
 
 }
 .page-heading::before {
@@ -60,26 +60,28 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
+    width: 115%;
     height: 100%;
     color: #000;
     -webkit-text-stroke: .1vw #000;
     /* border-right: .5px solid #000; */
-    animation: animate 6s linear alternate;
-    width: fit-content;
+    animation: animate 6s ease-out alternate ;
     overflow: hidden;
     font-weight: 800;
+    scale: 1.2;
 
 }
 @keyframes animate {
-0%, 10%, 100% {
+10% {
     width: 0;
-        scale: 1;
+    color: #141E30;
+    
 
 }
-70% {
+95% {
     width: 100%;
-
+    /* scale: 1.2; */
+    color: #fffff7;
 }
 }
 .container {
@@ -124,7 +126,7 @@ align-self: center;
 width: 100%;
 padding: 8px;
 border: 1px solid #ccc;
-border-radius: 8px;
+border-radius: 12px;
 resize: none;
 }
 .form-group input:focus,
@@ -155,12 +157,15 @@ font-weight: bold;
 cursor: pointer;
 transition: 0.4s ease-in-out;
 }
-
-.btn:hover {
-background-color: #0069d9;
-scale: .9;
+.btn:hover,
+.btn:active {
+    background-color: #0069d9;
+scale: .95;
 border-radius: 12px;
 color: #fff;
+}
+button:disabled {
+    cursor: not-allowed;
 }
 
 .resume-preview {
